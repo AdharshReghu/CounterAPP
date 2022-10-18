@@ -26,10 +26,28 @@ class _counterState extends State<counter> {
       ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Image.asset('Assets/clock.png',height: 150,width: 150,)
+              Image.asset('Assets/clock.png',height: 150,width: 150,),
+              SizedBox(height: 30.0,),
+              Text("COUNT",style: TextStyle(fontSize: 40.0,fontWeight: FontWeight.bold,color: Colors.redAccent[700]),),
+              Text("0",style: TextStyle(fontSize: 80.0,fontWeight: FontWeight.bold),),
+              SizedBox(height: 60.0,),
+              Column(
+                children: [
+                  Row(
+                    children: [
+
+                    ],
+                  ),
+                  Row(
+                    children: [],
+                  )
+                ],
+              )
+
 
             ],
         ),

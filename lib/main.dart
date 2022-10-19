@@ -34,7 +34,7 @@ class _counterState extends State<counter> {
               Image.asset('Assets/clock.png',height: 150,width: 150,),
               SizedBox(height: 30.0,),
               Text("COUNT",style: TextStyle(fontSize: 40.0,fontWeight: FontWeight.bold,color: Colors.white),),
-              Text("0",style: TextStyle(fontSize: 80.0,fontWeight: FontWeight.bold),),
+              Text("$value",style: TextStyle(fontSize: 80.0,fontWeight: FontWeight.bold),),
               SizedBox(height: 60.0,),
               Column(
                 children: [
@@ -44,7 +44,12 @@ class _counterState extends State<counter> {
                         color: Colors.white ,
                         padding: EdgeInsets.fromLTRB(25.0, 10.0, 30.0, 10.0),
                         child: IconButton(
-                            onPressed: (){},
+                            onPressed: ()
+                            {
+                              setState(() {
+                                value += 1;
+                              });
+                            },
                             icon: Icon(Icons.add,color: Colors.grey[900],size: 40.0,)),
                       ),
                       Spacer(),
@@ -52,15 +57,26 @@ class _counterState extends State<counter> {
                         color: Colors.grey[900] ,
                         padding: EdgeInsets.fromLTRB(25.0, 10.0, 30.0, 10.0),
                         child: IconButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              setState(() {
+                                value -= 1;
+                              });
+                            },
                             icon: Icon(Icons.minimize,color: Colors.white,size: 40.0,)),
                       )
                     ],
                   ),
+                  SizedBox(height: 30.0,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      ElevatedButton(onPressed:(){},
+                      ElevatedButton(
+                        onPressed:()
+                        {
+                          setState(() {
+                            value = 0;
+                          });;
+                        },
                           child: Text('Reset'),
                       style: ElevatedButton.styleFrom(backgroundColor: Colors.redAccent),)
                     ],

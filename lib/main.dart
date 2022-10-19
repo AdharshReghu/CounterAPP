@@ -14,6 +14,7 @@ class counter extends StatefulWidget {
 }
 
 class _counterState extends State<counter> {
+  int value = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,18 +33,35 @@ class _counterState extends State<counter> {
             children: [
               Image.asset('Assets/clock.png',height: 150,width: 150,),
               SizedBox(height: 30.0,),
-              Text("COUNT",style: TextStyle(fontSize: 40.0,fontWeight: FontWeight.bold,color: Colors.redAccent[700]),),
+              Text("COUNT",style: TextStyle(fontSize: 40.0,fontWeight: FontWeight.bold,color: Colors.white),),
               Text("0",style: TextStyle(fontSize: 80.0,fontWeight: FontWeight.bold),),
               SizedBox(height: 60.0,),
               Column(
                 children: [
                   Row(
                     children: [
-
+                      Container(
+                        color: Colors.white ,
+                        padding: EdgeInsets.fromLTRB(25.0, 10.0, 30.0, 10.0),
+                        child: IconButton(
+                            onPressed: (){},
+                            icon: Icon(Icons.add,color: Colors.grey[900],size: 40.0,)),
+                      )
                     ],
                   ),
+                  SizedBox(width: 10.0,),
                   Row(
-                    children: [],
+                    children: [
+                      Container(
+                        color: Colors.grey[900] ,
+                        padding: EdgeInsets.fromLTRB(25.0, 10.0, 30.0, 10.0),
+                        margin: EdgeInsets.fromLTRB(25.0, 10.0, 30.0, 10.0),
+                        child: IconButton(
+                            onPressed: (){},
+                            icon: Icon(Icons.minimize,color: Colors.white,size: 40.0,)),
+                      )
+
+                    ],
                   )
                 ],
               )

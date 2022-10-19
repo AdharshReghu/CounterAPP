@@ -1,16 +1,11 @@
 # counterapp
 
-My first project using flutter , alone
+My first project using flutter. 
 
-## Getting Started
+This is just a simple Counter APP which has three buttons ( 2 icon buttons and
+1 elevated button) + , - and reset. 
 
-This project is a starting point for a Flutter application.
+This app is justice built for a motivation to continue learning flutter. 
 
-A few resources to get you started if this is your first Flutter project:
+Thank you. 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

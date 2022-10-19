@@ -46,23 +46,26 @@ class _counterState extends State<counter> {
                         child: IconButton(
                             onPressed: (){},
                             icon: Icon(Icons.add,color: Colors.grey[900],size: 40.0,)),
-                      )
-                    ],
-                  ),
-                  SizedBox(width: 10.0,),
-                  Row(
-                    children: [
+                      ),
+                      Spacer(),
                       Container(
                         color: Colors.grey[900] ,
                         padding: EdgeInsets.fromLTRB(25.0, 10.0, 30.0, 10.0),
-                        margin: EdgeInsets.fromLTRB(25.0, 10.0, 30.0, 10.0),
                         child: IconButton(
                             onPressed: (){},
                             icon: Icon(Icons.minimize,color: Colors.white,size: 40.0,)),
                       )
-
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(onPressed:(){},
+                          child: Text('Reset'),
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.redAccent),)
                     ],
                   )
+
                 ],
               )
 
